@@ -1,0 +1,3 @@
+index=_internal source="*license_usage.log*" type=Usage earliest=-7d latest=now
+| timechart span=1d sum(eval(round(b/1024/1024/1024,5))) AS usage by idx
+
