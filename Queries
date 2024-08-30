@@ -1,3 +1,7 @@
 index=_internal source="*license_usage.log*" type=Usage earliest=-7d latest=now
 | timechart span=1d sum(eval(round(b/1024/1024/1024,5))) AS usage by idx
 
+
+index=your_index_name | stats dc(host) as unique_workstations
+
+index="winregmon" host="XXXXXX" key_path="HKLM\\system\\StoreToLooksie*"
