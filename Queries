@@ -8,3 +8,4 @@ index="winregmon" host="XXXXXX" key_path="HKLM\\system\\StoreToLooksie*"; Get qu
 
 
 index=wineventlog | stats count by host | sort -count | head 10;  most logs by host
+index=wineventlog host="My-Host" | stats count by EventCode | sort -count | head 10; highest logged by top ten
