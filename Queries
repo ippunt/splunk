@@ -5,3 +5,6 @@ index=_internal source="*license_usage.log*" type=Usage earliest=-7d latest=now
 index=your_index_name | stats dc(host) as unique_workstations; get unique hosts that have logged to a index
 
 index="winregmon" host="XXXXXX" key_path="HKLM\\system\\StoreToLooksie*"; Get quantity of logs to particular store. 
+
+
+index=wineventlog | stats count by host | sort -count | head 10;  most logs by host
