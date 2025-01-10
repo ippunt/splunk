@@ -15,3 +15,6 @@ you can also use tail
 index="index" host="host" src_ip="1.1.1.1" | stats values(dest) as unique_dests; get printed out list of destinations
 
 index="index" host="host" src_ip="1.1.1.1" | stats dc(dest) as unique_dests; would just print quantity of unique destinations. distinct count
+
+
+index="index" host="host" | search "Criteria" | search "Criteria" | search "Criteria"        When you need something quick and don't want a sophisticated query. 
